@@ -88,13 +88,14 @@ def ExtractChr(reader, output_name_base):
 
 
 def ExtractPrg(reader, output_name_base):
-  filepostfix = 100
+  postfixes = ['b', 'a', 'd', 'c']
+  filepostfix = 0
   for i in xrange(1, reader.headers.prg_16k_blocks+1):
     chunk = reader.GetPrgBlock(i)
     for y in xrange(0,2):
-      filename = "%s%s" % (output_name_base, chr(filepostfix))
+      filename = "%s%s" % (output_name_base, postfixes[filepostfix])
       WriteChunk(filename, chunk[y*8192:(y+1)*8192])
-      filepostfix -= 1
+      filepostfix += 1
 
 
 def main(argv):
