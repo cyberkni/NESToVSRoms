@@ -1,4 +1,4 @@
-#!/opt/local/bin/python2.7
+#!/usr/bin/python
 
 """iNES format ROM to VS ROM files converter.
 
