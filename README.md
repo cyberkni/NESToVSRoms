@@ -1,6 +1,8 @@
 # NESToVsRoms
 Script to extract 8KB ROMs from iNES format Nintendo Entertainment System ROM files.
 
+This currently is only supports games which do not require a daughterboard on the Dualsystem mainboard to run. However, it *is* possible to run NES games which require mappers with the right daughterboard. This is future work to be done.
+
 # Usage
 ./nes_to_vs_rom.py <yourgame.nes> <output_directory>
 
@@ -17,4 +19,6 @@ Included here is the _vstennis_maker.py_ script which will take a resulting outp
 The directory can then be renamed to vstennis be copied to your mame roms directory. For the game to work you'll need to add an rp2c0x.pal file from another Vs. game like duckhunt.
 
 Once this is complete the game can be tested by running mame for the vstennis game. It will complain about CRC mismatches and warn you but the game should work.
+
 # Known Working Games
+See the wiki [Game Compatibility List](https://github.com/cyberkni/NESToVSRoms/wiki/Game-Compatibility-List)
